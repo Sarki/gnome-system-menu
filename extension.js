@@ -37,19 +37,19 @@ let settingsJSON,settings,settingsID;
 
 let extension;
 let list = [
-{ type: "command",	text: _("About This Computer"),	action: ['gnome-control-center','info']		},
+{ type: "command",	text: _("About This Computer"),	action: ['gnome-control-center','info-overview']		},
 { type: "desktop",	text: _("Software Update"),	action: 'update-manager.desktop'		},
 { type: "desktop",	text: _("Software Center"),	action: 'org.gnome.Software.desktop'	},
 { type: "separator" },
-{ type: "desktop",	text: _("System Preferences"),	action: 'gnome-control-center.desktop'		},
-{ type: "desktop",	text: _("Gnome Tweak Tool"),	action: 'gnome-tweak-tool.desktop'		},
+{ type: "command",	text: _("System Preferences"),	action: ['gnome-control-center','wifi']		},
+{ type: "command",	text: _("Gnome Tweak Tool"),	action: ['gnome-tweaks']		},
 { type: "separator" },
 { type: "desktop",	text: _("System Monitor"),		action: 'gnome-system-monitor.desktop'		},
 { type: "forceQuit",	text: _("Force Quit"),		action: ''					},
 { type: "separator" },
-{ type: "powerOff",	text: _("Power Off"),		action: ''					},
-{ type: "command",	text: _("Log Out"),		action: ['gnome-session-quit']			},
 { type: "command",	text: _("Lock"),			action: ['gnome-screensaver-command','-l']	},
+{ type: "command",	text: _("Log Out"),		action: ['gnome-session-quit']			},
+{ type: "powerOff",	text: _("Power Off"),		action: ''					},
 {}
 ];
 

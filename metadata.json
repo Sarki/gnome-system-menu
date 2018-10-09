@@ -3,10 +3,8 @@
   "name": "System Menu",
   "settings-schema": "org.gnome.shell.extensions.SystemMenu",
   "shell-version": [
-    "3.18",
-    "3.20",
-    "3.22",
-    "3.24"
+    "3.24",
+    "3.28"
   ],
   "url": "http://github.com/jonnius/gnome-system-menu",
   "uuid": "SystemMenu@jonnius.github.com",
