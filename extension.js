@@ -38,18 +38,19 @@ let settingsJSON,settings,settingsID;
 let extension;
 let list = [
 { type: "command",	text: _("About This Computer"),	action: ['gnome-control-center','info-overview']		},
-{ type: "desktop",	text: _("Software Update"),	action: 'update-manager.desktop'		},
-{ type: "desktop",	text: _("Software Center"),	action: 'org.gnome.Software.desktop'	},
 { type: "separator" },
 { type: "command",	text: _("System Preferences"),	action: ['gnome-control-center','wifi']		},
 { type: "command",	text: _("Gnome Tweak Tool"),	action: ['gnome-tweaks']		},
+{ type: "desktop",	text: _("Software Update"),		action: 'update-manager.desktop'		},
+{ type: "desktop",	text: _("Software Center"),		action: 'org.gnome.Software.desktop'	},
 { type: "separator" },
 { type: "desktop",	text: _("System Monitor"),		action: 'gnome-system-monitor.desktop'		},
 { type: "forceQuit",	text: _("Force Quit"),		action: ''					},
 { type: "separator" },
-{ type: "command",	text: _("Lock"),			action: ['gnome-screensaver-command','-l']	},
-{ type: "command",	text: _("Log Out"),		action: ['gnome-session-quit']			},
-{ type: "powerOff",	text: _("Power Off"),		action: ''					},
+{ type: "powerOff",	text: _("Power Off"),			action: ''					},
+{ type: "separator" },
+{ type: "command",	text: _("Lock"),				action: ['gnome-screensaver-command','-l']	},
+{ type: "command",	text: _("Log Out"),				action: ['gnome-session-quit']			},
 {}
 ];
 
@@ -62,8 +63,12 @@ const extensionObject = new Lang.Class({
 		this.forceQuitPtr = null;
 		this.forceQuitPids = null;
 
-		let icon = new St.Icon({ icon_name: 'emblem-default-symbolic', 
-					 style_class: 'system-status-icon' });
+/*		let icon = new St.Icon({ icon_name: 'emblem-default-symbolic', 
+					 style_class: 'system-status-icon' }); */
+/* BEGIN - Add custom icon */
+		let gicon = Gio.icon_new_for_string(Me.path + "/icons/logo.svg");
+		icon = new St.Icon({ gicon, style_class: 'system-status-icon' });
+/* END - Add custom icon */
 		let label = new St.Label({ text: "" });
 		this.parent(0.0, label.text);
 		this.actor.add_actor(icon);
