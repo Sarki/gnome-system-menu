@@ -1,8 +1,8 @@
 # Fork from https://github.com/jonnius/gnome-system-menu
 
-! Only tested on Ubuntu 18.04 !
+! Only tested on Ubuntu 19.04 !
 
-This is a fork to support Gnome 3.28, I thought it would be appreciated by some people.
+This is a fork to support Gnome 3.32.1, I thought it would be appreciated by some people.
 
 Follow the Manual Instructions below to install it on your computer.
 
@@ -13,5 +13,6 @@ System Menu is a GNOME Shell extension that creates a menu on the top panel, con
 ## Manual Installation
 - (Optionnal but recommended) Uninstall gnome-system-menu if you have installed it from the Gnome Software Center
 - Clone this repo (or download and unzip it)
+- Change the /icons/logo.svg file if you want anything other than the Ubuntu logo.
 - Run install.sh inside the directory
 - Restart the GNOME Shell and enable the extension using the GNOME Tweak Tool (disconnect from your session)
