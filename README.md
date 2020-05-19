@@ -1,4 +1,9 @@
-# Fork from https://github.com/jonnius/gnome-system-menu
+# Please prefer its successor - https://github.com/Sarki/FruitySystemMenu
+The reason for this is that new changes require a cleaner slate, therefore the changes compared to the original Extension need to live on their own. 
+
+--
+
+This is a fork from https://github.com/jonnius/gnome-system-menu
 
 ! Only tested on Ubuntu 19.04 !
 
